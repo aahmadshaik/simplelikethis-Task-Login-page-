@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Card Style */
+.login-container,
+.signup-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s;
+  box-sizing: border-box; /* Add this line */
+}
+
+/* Hover Effect */
+.login-container:hover,
+.signup-container:hover {
+  transform: scale(1.02);
+}
+
+/* Form Styles */
+h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  color: #333;
+}
+
+/* Input Group */
+.input-group {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* Input Icon */
+.input-icon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #aaa;
+  font-size: 20px;
+}
+
+/* Input Field Styles */
+input[type="email"],
+input[type="password"] {
+  width: 100%; /* Ensure input takes full width of the container */
+  padding: 15px 40px; /* Adjust padding to provide space for the icon */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  transition: border 0.3s;
+  box-sizing: border-box; /* Add this line */
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #6a11cb;
+}
+
+label {
+  position: absolute;
+  top: 15px;
+  left: 35px;
+  color: #aaa;
+  transition: 0.2s;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  top: -22px;
+  left: 10px;
+  font-size: 15px;
+  color: #6a11cb;
+}
+
+/* Button Styles */
+button {
+  background-color: #6a11cb;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #5a0fae;
+}
+
+/* Responsive Text Link */
+p {
+  text-align: center;
+}
+
+a {
+  color: #6a11cb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .login-container,
+  .signup-container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  input[type="email"],
+  input[type="password"],
+  button {
+    font-size: 1rem;
+  }
+}
